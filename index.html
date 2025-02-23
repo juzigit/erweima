@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <!-- 自适应移动端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片展示</title>
+    <style>
+        /* 重置默认边距 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f5f5;  /* 浅灰色背景 */
+            min-height: 100vh;   /* 至少撑满整个屏幕高度 */
+            display: flex;       /* 启用弹性布局 */
+            justify-content: center;  /* 水平居中 */
+            align-items: center;     /* 垂直居中 */
+            padding: 20px;       /* 防止手机端贴边 */
+        }
+
+        .image-container {
+            max-width: 90%;      /* 最大宽度为屏幕90% */
+            max-height: 90vh;    /* 最大高度为视口90% */
+            background: white;   /* 白色底框 */
+            padding: 20px;       /* 内边距 */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* 柔和阴影 */
+            border-radius: 10px; /* 圆角 */
+        }
+
+        img {
+            width: 100%;        /* 宽度填满容器 */
+            height: auto;        /* 高度自适应 */
+            display: block;      /* 消除图片底部间隙 */
+            object-fit: contain; /* 保持图片比例 */
+        }
+
+        /* 手机端优化 */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;  /* 缩小边距 */
+            }
+            .image-container {
+                padding: 10px;  /* 缩小内边距 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <!-- 替换your-image.jpg为你的实际图片路径 -->
+        <img src="image/image1.png" alt="展示图片">
+    </div>
+</body>
+</html>
